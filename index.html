@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://web.cdn.openinstall.io/openinstall.js"></script>
+    <script src="https://kit.fontawesome.com/64fccb9e01.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="app" class="all_body">
+        <!-- hearder -->
+        <div class="hearder" id="hearder">
+            <div class="message">
+                <ul>
+                    <li><i class="fab fa-facebook-square"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-google-plus-g"></i></li>
+                    <li><i class="fab fa-pinterest"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                </ul>
+            </div>
+            <div class="title" id="title">
+                <div class="img" id="img">
+                    <img src="img/mainLogo.png" alt="" />
+                </div>
+
+                <div class="burger_list">
+
+                    <div class="menu"></div>
+
+                </div>
+                <div class="menu_list" id="menu_list">
+                    <ul>
+                        <li class="burger_match">
+                            MATCH
+                            <ul class="burger_match_list">
+                                <li>
+                                    <p>
+                                        <a href="#new_result"></a>
+                                        LATEST RESULTS</p>
+                                </li>
+                                <li>
+                                    <a href="#match_item"></a>
+                                    <p>NEXT MATCH</p>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="burger_team">
+                            TEAM
+                            <ul class="burger_team_list">
+                                <li>
+                                    <p>ABOUT TEAM</p>
+                                    <a href="#team_item"></a>
+                                </li>
+                                <li>SUPPORT TEAM
+                                    <a href="#support"></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="burger_about">
+                            ABOUT
+                            <ul class="burger_about_list">
+                                <li>OUR NEWS
+                                    <a href="#team_news"></a>
+                                </li>
+                                <li>OUR AWARDS
+                                    <a href="#team_news"></a>
+                                </li>
+                                <li>OUR TEAM
+                                    <a href="#team_member"></a>
+                                </li>
+                                <li>GALLERY
+                                    <a href="#gallery"></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#fun_shop"></a>FUN SHOP</li>
+                        <li>
+                            <a href="#message_bg_list"></a>MESSAGE</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li class="match">
+                            MATCH
+                            <ul>
+                                <li>
+                                    <p>
+                                        <a href="#new_result"></a>
+                                        LATEST RESULTS</p>
+                                </li>
+                                <li>
+                                    <a href="#match_item"></a>
+                                    <p>NEXT MATCH</p>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="team">
+                            TEAM
+                            <ul>
+                                <li>
+                                    <p>ABOUT TEAM</p>
+                                    <a href="#team_item"></a>
+                                </li>
+                                <li>SUPPORT TEAM
+                                    <a href="#support"></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="about">
+                            ABOUT
+                            <ul>
+                                <li>OUR NEWS
+                                    <a href="#team_news"></a>
+                                </li>
+                                <li>OUR AWARDS
+                                    <a href="#team_news"></a>
+                                </li>
+                                <li>OUR TEAM
+                                    <a href="#team_member"></a>
+                                </li>
+                                <li>GALLERY
+                                    <a href="#gallery"></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#fun_shop"></a>FUN SHOP</li>
+                        <li>
+                            <a href="#message_bg_list"></a>MESSAGE</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <ul class="slides">
+                <input type="radio" id="control-1" name="control" checked />
+                <input type="radio" id="control-2" name="control" />
+                <!--  Left/Right Button  -->
+                <div class="navigator slide-1">
+                    <i class="fas fa-chevron-left left"></i>
+
+                    <label for="control-2">
+              <i class="fas fa-chevron-right right"></i>
+            </label>
+                </div>
+
+                <div class="navigator slide-2">
+                    <label for="control-1">
+              <i class="fas fa-chevron-left left"></i>
+            </label>
+                    <i class="fas fa-chevron-right right"></i>
+                </div>
+
+                <!--  /Left/Right Button  -->
+
+                <img class="slide" src="/img/mainImg_01.jpg" alt="" />
+
+                <img class="slide" /><img src="/img/mainImg_02.jpg" alt="" />
+            </ul>
+
+            <div class="txt">
+                <h1>LIFE IS ABOUT TIMING</h1>
+                <p>Just play. Have a fun. Enjoy the game.</p>
+            </div>
+            <div class="read_more">
+                <img src="img/read-more.jpg" alt="" />
+            </div>
+        </div>
+        <!-- new_result -->
+        <div class="new_result" id="new_result">
+            <div class="result_fraction">
+                <div class="result_win">
+                    <div class="img">
+                        <img src="/img/teamlogo_01.png" alt="" />
+                    </div>
+                    <p>UVENTUS</p>
+                </div>
+                <div class="team">
+                    <div class="score">
+                        <div class="score_txt">
+                            <p>3</p>
+                            <div class="vs">
+                                <p>vs</p>
+                            </div>
+                            <p class="txt">1 </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="result_lost">
+                    <div class="score">
+                        <p>CHALENGER</p>
+                    </div>
+                    <div class="img">
+                        <img src="/img/teamlogo_02.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="result_content">
+                <div class="result">
+                    <div class="title">
+                        <div class="blank_block"></div>
+                        <p>LATEST RESULTS</p>
+                        <div class="blank_block"></div>
+                    </div>
+                    <div class="resulu_match">
+                        <h2>Best of the best match</h2>
+                        <p>October 20, 2015 | 7:00 pm</p>
+                        <span>SCORE</span>
+
+                        <p class="introduce">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate magni laborum tenetur, excepturi odit reprehenderit asperiores unde blanditiis eum deserunt repellendus. Culpa atque dolore delectus sint asperiores mollitia, doloremque ea?
+                        </p>
+                    </div>
+                    <div class="read_more">
+                        <div class="txt">
+                            <p>
+                                <a href="#match_item"></a>READ MORE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- team -->
+        <div class="team_item" id="team_item">
+            <div class="team_about team_nav">
+                <div class="img"></div>
+
+                <div class="title">
+                    <h2>ABOUT <span>TEAM</span></h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis autem eius reprehenderit iure doloribus non quaerat. Atque dolor molestias ex repellendus! Delectus accusantium eum quod temporibus quas, libero repudiandae est.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem natus eum dicta id praesentium. Deserunt vero voluptates id dicta dolorum?</p>
+                    <div class="read_more">
+                        <p>
+                            <a href="#team_member"></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="coach_about coach_nav" id="coach_about">
+                <div class="coach_name">
+                    <div class="img">
+
+                        <i class="fa-brands fa-empire"></i>
+
+                    </div>
+                    <div class="name">
+                        <p>Bernard</p> <span>Fernandez</span></div>
+                </div>
+                <div class="title">
+                    <h2>TRAINERS</h2>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi quia facere blanditiis eius, repellat nesciunt itaque, repudiandae nihil modi placeat praesentium eum sunt. Harum numquam doloremque, iusto quisquam eaque molestiae.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!-- support -->
+        <div class="support" id="support">
+            <div class="support_content">
+                <div class="item">
+                    <div class="title">
+                        <div class="blank_block"></div>
+                        <h1>SUPPORT <span>TEAM</span></h1>
+                        <div class="blank_block"></div>
+                    </div>
+                    <div class="support_inner">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo rem odit voluptate porro ea facilis, cum exercitationem consectetur explicabo voluptas cupiditate natus beatae quod corrupti veniam temporibus. Inventore qui consequuntur
+                            commodi non animi ipsam aperiam cumque, repellendus exercitationem saepe officia magnam dignissimos quae atque quidem, odit quaerat corrupti suscipit. Accusamus.</p>
+                    </div>
+                    <div class="read_more">
+                        <div class="blank_block"></div>
+                        <p>
+                            <a href="#fun_shop"></a>
+                        </p>
+                        <div class="blank_block"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next_match -->
+        <div class="match_item" id="match_item">
+            <div class="next_time_about">
+                <div class="next_match">
+                    <div class="title">NEXT
+                        <p>MATCH</p>
+                    </div>
+                    <div class="next_time">
+                        <div class="day">
+                            <p id="day"> </p><span>DAY</span>
+                        </div>
+                        <div class="hrs">
+                            <p id="hrs"></p><span>HRS</span>
+                        </div>
+                        <div class="min">
+                            <p id="min"></p><span>MIN</span>
+                        </div>
+                        <div class="sec">
+                            <p id="sec"></p><span>SEC</span>
+                        </div>
+                    </div>
+                    <div class="next_team">
+                        <div class="first_team">
+                            <div class="img">
+                                <img src="/img/teamlogo_02.png" alt="">
+                                <p>UVENTUS</p>
+                            </div>
+                        </div>
+                        <div class="vs">vs</div>
+                        <div class="se_team">
+                            <div class="img">
+                                <p>CHALENGER</p>
+                                <img src="/img/teamlogo_03.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="now_time">
+                        <p>October 15, 2020 | 7:00 pm</p>
+                        <p>Cambridgeshire UK</p>
+                    </div>
+                </div>
+            </div>
+            <div class="time_match">
+                <div class="time_table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="aboot_match_day day_nav">October 15, 2020</td>
+                                <td class="aboot_match_team team_nav">
+                                    <div class="img">
+                                        <img src="/img/teamlogo_02.png" alt="">
+                                    </div>
+                                    <div class="txt">
+                                        <p>UVENTUS</p>
+                                        <span>VS</span>
+                                        <p>CHALENGER</p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="/img/teamlogo_03.png" alt="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="aboot_match_day day_nav">October 23, 2020</td>
+                                <td class="aboot_match_team team_nav">
+                                    <div class="img">
+                                        <img src="/img/teamlogo_04.png" alt="">
+                                    </div>
+                                    <div class="txt">
+                                        <p>UVENTUS</p>
+                                        <span>VS</span>
+                                        <p>CHALENGER</p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="/img/teamlogo_05.png" alt="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="aboot_match_day day_nav">October 28, 2020</td>
+                                <td class="aboot_match_team team_nav">
+                                    <div class="img">
+                                        <img src="/img/teamlogo_06.png" alt="">
+                                    </div>
+                                    <div class="txt">
+                                        <p>UVENTUS</p>
+                                        <span>VS</span>
+                                        <p>CHALENGER</p>
+                                    </div>
+                                    <div class="img ">
+                                        <img src="/img/teamlogo_07.png" alt="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="aboot_match_day day_nav">October 07, 2021</td>
+                                <td class="aboot_match_team team_nav">
+                                    <div class="img">
+                                        <img src="/img/teamlogo_08.png" alt="">
+                                    </div>
+                                    <div class="txt">
+                                        <p>UVENTUS</p>
+                                        <span>VS</span>
+                                        <p>CHALENGER</p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="/img/teamlogo_09.png" alt="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="aboot_match_day day_nav">October 13, 2021</td>
+                                <td class="aboot_match_team team_nav">
+                                    <div class="img">
+                                        <img src="/img/teamlogo_01.png" alt="">
+                                    </div>
+                                    <div class="txt">
+                                        <p>UVENTUS</p>
+                                        <span>VS</span>
+                                        <p>CHALENGER</p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="/img/teamlogo_08.png" alt="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="aboot_match_day day_nav">October 28, 2021</td>
+                                <td class="aboot_match_team team_nav">
+                                    <div class="img">
+                                        <img src="/img/teamlogo_02.png" alt="">
+                                    </div>
+                                    <div class="txt">
+                                        <p>UVENTUS</p>
+                                        <span>VS</span>
+                                        <p>CHALENGER</p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="/img/teamlogo_07.png" alt="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="aboot_match_day day_nav ">October 12, 2022</td>
+                                <td class="aboot_match_team team_nav">
+                                    <div class="img">
+                                        <img src="/img/teamlogo_03.png" alt="">
+                                    </div>
+
+                                    <div class="txt">
+                                        <p>UVENTUS</p>
+                                        <span>VS</span>
+                                        <p>CHALENGER</p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="/img/teamlogo_06.png" alt="">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- team_news -->
+        <div class="team_news" id="team_news">
+            <div class="team_item_news">
+                <div class="team_content">
+                    <div class="title">OUR
+                        <p>NEWS</p>
+                    </div>
+                    <div class="new_item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatem amet totam quas rerum ullam excepturi eum, consequatur tenetur laudantium quibusdam dolor. Expedita repellendus nesciunt quasi suscipit, hic neque quia?</div>
+                    <div class="team_about">
+                        <div class="news_list">
+                            <div class="img"></div>
+                            <div class="news_about">
+                                <div class="news_day">October 29, 2015</div>
+                                <div class="news_title">DUIS AUTE IRURE DOLOR IN REPREHENDERIT</div>
+                                <div class="news_item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore…</div>
+                                <div class="read_more">READ MORE</div>
+                            </div>
+                        </div>
+                        <div class="news_list">
+                            <div class="img2"></div>
+                            <div class="news_about">
+                                <div class="news_day">October 29, 2015</div>
+                                <div class="news_title">DUIS AUTE IRURE DOLOR IN REPREHENDERIT</div>
+                                <div class="news_item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore…</div>
+                                <div class="read_more">
+                                    <p>READ MORE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="news_button">
+                <button class="button_body">ALL NEWS</button>
+            </div>
+        </div>
+        <!-- gallery -->
+        <div class="gallery" id="gallery">
+            <div class="title">
+                <span>GALLERY</span>
+            </div>
+            <div class="txt">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, voluptatibus facere? Quae repellat ducimus repellendus ea eum vitae praesentium commodi odit. Ut dicta dolorum eum qui. Sunt ratione esse placeat.</p>
+            </div>
+        </div>
+        <!-- gallery_list -->
+        <div class="gallery_list">
+            <ul>
+                <li v-for="(item,index) in menu" :key="index" :class="{on:index===sel}" @click="sel=index , data()">
+                    {{item}}
+                </li>
+            </ul>
+        </div>
+        <!-- gallery_pic -->
+        <div class="gallery_pic">
+            <div class="photo" v-for="(item,index) in list" :key="index">
+                <img :src="item.img" alt=""></div>
+        </div>
+        <!-- awards -->
+        <div class="awards" id="awards">
+            <div class="award_item">
+                <div class="award_title">
+                    <h6>OUR
+                        <p>AWARDS</p>
+                    </h6>
+                    <div class="awards_select">
+                        <div>
+                            <i class="fas fa-chevron-left" style="color: #ffc722;" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <i class="fas fa-chevron-right" style="color: #363533;" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="award_list">
+                    <div class="award_img">
+                        <ul>
+                            <li> <img src="img/awards_01.png" alt="">
+                                <h2>2012 UEFA</h2>
+                                <p>Championship league</p>
+                            </li>
+                            <li>
+                                <img src="img/awards_02.png" alt="">
+                                <h2>2012 UEFA</h2>
+                                <p>Championship league</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="award_achievements">
+                <div class="award_achievements_title">ACHIEVEMENTS</div>
+                <div class="award_achievements_item">
+                    <ul>
+                        <li>
+                            <img class="award_achievements_img" src="/img/awards_icon_01.png">
+                            <div class="txt">
+                                <h2>8</h2>
+                                <p>AWARDS</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="award_achievements_img" src="/img/awards_icon_02.png">
+                            <div class="txt">
+                                <h2>35</h2>
+                                <p>GOALS</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="award_achievements_img" src="/img/awards_icon_03.png">
+                            <div class="txt">
+                                <h2>12</h2>
+                                <p>GAMES</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="award_achievements_img" src="/img/awards_icon_04.png">
+                            <div class="txt">
+                                <h2>13</h2>
+                                <p>VIOLATIONS</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- team_member -->
+        <div class="team_member" id="team_member">
+            <div class="team_title">
+                <h3>
+                    <p>OUR </p>TEAM</h3>
+                <div class="txt">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A at blanditiis, molestias quae quidem dolore sapiente esse quasi. Vero odio natus autem repellendus excepturi et quidem officiis placeat esse dolores?
+                    </p>
+                </div>
+                <div class="read_more">
+                    <div class="blank_block"></div>
+                    READ MORE
+                    <div class="blank_block"></div>
+                </div>
+            </div>
+            <div class="team_content">
+                <ul>
+                    <li class="team_member_list">
+
+                        <div class="team_pic">
+                            <img src="img/team_pic_01.jpg">
+                            <div class="team_number">
+                                <span>36</span>
+                            </div>
+                        </div>
+                        <div class="team_txt">
+                            <h2>CHRISTOPHER HERRERA</h6>
+                                <span>DEFENDER</span>
+                        </div>
+
+                    </li>
+                    <li class="team_member_list">
+                        <div class="team_pic">
+                            <img src="img/team_pic_02.jpg">
+                            <div class="team_number">
+                                <span>22</span>
+                            </div>
+                        </div>
+                        <div class="team_txt">
+                            <h2>CHRISTOPHER HERRERA</h6>
+                                <span>DEFENDER</span>
+                        </div>
+                    </li>
+                    <li class="team_member_list">
+
+                        <div class="team_pic">
+                            <img src="img/team_pic_03.jpg">
+                            <div class="team_number">
+                                <span>10</span>
+                            </div>
+                        </div>
+                        <div class="team_txt">
+                            <h2>CHRISTOPHER HERRERA</h6>
+                                <span>DEFENDER</span>
+                        </div>
+
+                    </li>
+                    <li class="team_member_list">
+                        <div class="team_pic">
+                            <img src="img/team_pic_04.jpg">
+                            <div class="team_number">
+                                <span>07</span>
+                            </div>
+                        </div>
+                        <div class="team_txt">
+                            <h2>CHRISTOPHER HERRERA</h6>
+                                <span>DEFENDER</span>
+                        </div>
+                    </li>
+                </ul>
+
+
+
+
+            </div>
+        </div>
+        <!-- FUN SHOP -->
+        <div class="fun_shop" id="fun_shop">
+            <h2>
+                <p>FUN</p> SHOP</h2>
+            <div class="txt">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A at blanditiis, molestias quae quidem dolore sapiente esse quasi. Vero odio natus autem repellendus excepturi et quidem officiis placeat esse dolores?</p>
+            </div>
+
+        </div>
+        <!-- show_list -->
+        <div class="show_list">
+            <ul>
+                <li v-for="(item,index) in shop" :key="index" :class="{on:index===coin}" @click="coin=index , data() ">
+                    {{item}}
+                </li>
+            </ul>
+        </div>
+        <!-- show_item -->
+        <div class="show_item">
+            <div class="show_content">
+                <ul>
+                    <li :class="{on:1==coin,se:2==coin}">
+                        <img src="img/shop_01.jpg">
+                        <div class="add_cart">
+                            <h2>$23.0</h2>
+                            <span>ADD TO CART</span>
+                        </div>
+                    </li>
+                    <li :class="{on:1==coin,se:2==coin}">
+                        <img src="img/shop_02.jpg">
+                        <div class="add_cart">
+                            <h2>$23.0</h2>
+                            <span>ADD TO CART</span>
+                        </div>
+                    </li>
+                    <li :class="{on:1==coin,se:2==coin}" >
+                        <img src="img/shop_03.jpg">
+                        <div class="add_cart">
+                            <h2>$23.0</h2>
+                            <span>ADD TO CART</span>
+                        </div>
+                    </li>
+                    <li :class="{on:1==coin,se:2==coin}" >
+                        <img src="img/shop_04.jpg">
+                        <div class="add_cart">
+                            <h2>$23.0</h2>
+                            <span>ADD TO CART</span>
+                        </div>
+                    </li>
+                    <li :class="{on:1==coin,se:2==coin}" >
+                        <img src="img/shop_05.jpg">
+                        <div class="add_cart">
+                            <h2>$23.0</h2>
+                            <span>ADD TO CART</span>
+                        </div>
+                    </li>
+                    <li :class="{on:1==coin,se:2==coin}" >
+                        <img src="img/shop_06.jpg">
+                        <div class="add_cart">
+                            <h2>$23.0</h2>
+                            <span>ADD TO CART</span>
+                        </div>
+                    </li>
+                    <li :class="{on:1==coin,se:2==coin}">
+                        <img src="img/shop_07.jpg">
+                        <div class="add_cart">
+                            <h2>$23.0</h2>
+                            <span>ADD TO CART</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="all_news">
+                <div class="news_button">
+                    <button class="button_body">VIEW ALL</button>
+                </div>
+            </div>
+        </div>
+        <!-- message_bg -->
+        <div class="message_bg_list" id="message_bg_list">
+            <div class="message">
+                <div class="message_sel">
+                    <div class="message_icons">
+                        <img src="img/ms_logo.png">
+                        <ul>
+                            <li><i class="fab fa-facebook-square"></i></li>
+                            <li><i class="fab fa-twitter"></i></li>
+                            <li><i class="fab fa-google-plus-g" ></i></li>
+                            <li><i class="fab fa-pinterest" ></i></li>
+                            <li><i class="fab fa-instagram" ></i></li>
+                        </ul>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quos explicabo dicta ea exercitationem expedita eaque, veritatis iste nihil eius excepturi natus consequatur laboriosam blanditiis sapiente, vero doloremque dolorum
+                        soluta adipisci esse libero repellendus dignissimos? Totam, laudantium. Excepturi quos, ullam error voluptatibus eum et dolor libero reiciendis, quisquam, ratione natus.</p>
+                </div>
+
+                <!-- message_tweets -->
+                <div class="message_tweets">
+                    <h2>LATEST <span>TWEETS</span></h2>
+                    <div class="txt">
+                        <p>Is anyone else's password still on holiday mode? pic.twitter.com/jnlLIrlrhp</p>
+                        <p>Yesterday at 9:00 am</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita cum veniam optio unde ducimus nam, non facere, eius perferendis voluptatem vero harum fugit vitae consequuntur quidem. Odio laborum nostrum facere.</p>
+                        <p>December 26, 2019 9:00 pm</p>
+                    </div>
+                </div>
+
+                <!-- message_match -->
+                <div class="message_match">
+                    <div class="message_item">
+                        <h6>LAST <span>MATCH</span></h6>
+                        <div class=" ms_left_right">
+                            <i class="fas fa-angle-left"></i>
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="message_list">
+                        <ul>
+                            <li>
+                                <div class="message_pic">
+                                    <img src="img/teamlogo_02.png">
+                                </div>
+                                <span class="message_team">UVENTUS</span>
+                                <span class="message_vs">3：1</span>
+                                <span class="message_team">CHALENGER</span>
+                                <div class="message_pic">
+                                    <img src="img/teamlogo_03.png">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- message_subscribe -->
+                <div class="message_email">
+                    <div class="subscribe_top">
+                        <h2>NEWSLETTERS</h2>
+                    </div>
+                    <div class="subscribe">
+                        <input type="text" placeholder="Email">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- toTop -->
+        <a href="#" id="to_top" class="to_top to_top_nav">
+            <span class="fas fa-angle-up "></span>
+        </a>
+        <!-- footer -->
+        <div class="footer">
+            <p>Copyright © 2019 Spartak Team. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    const {
+        createApp,
+        ref,
+        onMounted,
+        moumted
+    } = Vue;
+
+    createApp({
+        setup() {
+            const shop = ref(["SHOES", "T-SHIRTS", "BALL"]);
+            const menu = ref(["ALL", "PLAYER", "AUDIENCE"]);
+            const list = ref([]);
+            const sel = ref(0);
+            const coin = ref(0);
+            $(window).scroll(showMenu);
+
+            $(function() {
+                $('.burger_list').on('click', function() {
+                    $('.menu_list').slideToggle('click');
+                });
+            });
+            $(function() {
+                $('.burger_match').on('click', function() {
+                    $('.burger_match_list').slideToggle('click');
+                });
+            });
+            $(function() {
+                $('.burger_team').on('click', function() {
+                    $('.burger_team_list').slideToggle('click');
+                });
+            });
+            $(function() {
+                $('.burger_about').on('click', function() {
+                    $('.burger_about_list').slideToggle('click');
+                });
+            });
+            // 设置倒数的截止时间
+            const deadline = new Date("2020-10-15T11:00:00Z");
+
+            // 每秒更新倒数时间
+            const timer = setInterval(function() {
+                // 计算时间差
+                const now = new Date().getTime();
+                const diff = deadline.getTime() - now;
+
+                // 计算剩余时间
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                // 显示剩余时间
+                document.getElementById("day").innerHTML = days
+                document.getElementById("hrs").innerHTML = hours
+                document.getElementById("min").innerHTML = minutes
+                document.getElementById("sec").innerHTML = seconds
+            }, 1000);
+
+            function data() {
+                axios.get("json/schema.json").then((res) => {
+                    list.value = res.data[sel.value];
+                });
+            };
+
+
+            function showMenu() {
+                if ($(window).scrollTop() > 300) {
+                    $('.to_top').addClass('to_top_nav');
+                    $('.team_about').addClass('team_nav');
+                    $('.coach_about').addClass('coach_nav');
+                } else {
+                    $('.to_top').removeClass('to_top_nav');
+                    $('.team_about').removeClass('team_nav');
+                    $('.coach_about').removeClass('coach_nav');
+                }
+                if ($(window).scrollTop() < 1300) {
+                    $('.aboot_match_day').addClass('day_nav');
+                    $('.aboot_match_team').addClass('day_nav');
+                } else {
+                    $('.aboot_match_day').removeClass('day_nav');
+                    $('.aboot_match_team').removeClass('day_nav');
+                }
+                if ($(window).scrollTop() > 3800) {
+                    $('.team_member_list').addClass('list_nav');
+                } else {
+                    $('.team_member_list').removeClass('list_nav');
+                }
+            };
+
+            onMounted(() => {
+                data();
+            });
+
+            return {
+                list,
+                menu,
+                sel,
+                data,
+                shop,
+                coin,
+            };
+        },
+    }).mount("#app");
+</script>
+
+</html>
