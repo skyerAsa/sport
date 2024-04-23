@@ -2303,7 +2303,7 @@ img {
 
 .show_item {
   padding: 0 20px 100px;
-  background: url(..img/shop_bg.jpg) no-repeat center center/cover;
+  background: url(../img/shop_bg.jpg) no-repeat center center/cover;
 }
 .show_item .show_content {
   width: 100%;
