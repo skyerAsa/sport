@@ -9,7 +9,7 @@
   position: relative;
   transform: overflow 2s 3s;
   .message {
-    padding:10px 150px 0 0 ;
+    padding: 10px 150px 0 0;
     position: absolute;
     top: 1%;
     right: 0;
@@ -439,7 +439,7 @@
           content: "";
           width: 200px;
           height: 150px;
-          background-image: url(/img/mainImg_01.jpg);
+          background-image: url(img/mainImg_01.jpg);
           background-size: cover;
           position: absolute;
           left: 0;
@@ -453,7 +453,7 @@
           width: 200px;
           height: 150px;
           padding-right: 80px;
-          background-image: url(/img/mainImg_02.jpg);
+          background-image: url(img/mainImg_02.jpg);
           background-size: cover;
           position: absolute;
           right: 1%;
@@ -753,7 +753,7 @@
 
 // team
 .team_item {
-  background-image: url(/img/aboutBg_01.jpg);
+  background-image: url(img/aboutBg_01.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -780,13 +780,13 @@
       width: 100%;
       margin: 0;
       padding: 30px;
-      background-image: url(/img/aboutBg_02.jpg);
+      background-image: url(img/aboutBg_02.jpg);
     }
     .img {
       width: 50%;
       max-width: 400px;
       height: 240px;
-      background-image: url(/img/about_pic_01.jpg);
+      background-image: url(img/about_pic_01.jpg);
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -887,7 +887,7 @@
     @include rwd(1023) {
       width: 100%;
       padding-left: 100px;
-      background-image: url(/img/aboutBg_03.jpg);
+      background-image: url(img/aboutBg_03.jpg);
     }
     @include rwd(1023) {
       padding-left: 0px;
@@ -909,7 +909,7 @@
       height: 240px;
       width: 240px;
       margin-right: 20px;
-      background-image: url(/img/about_pic_02.png);
+      background-image: url(img/about_pic_02.png);
       background-repeat: no-repeat;
       background-position: center;
       position: relative;
@@ -963,7 +963,7 @@
         rgba(54, 53, 51, 0.9),
         rgba(54, 53, 51, 0.9)
       ),
-      url(/img/support_bg.jpg) no-repeat center center / cover;
+      url(img/support_bg.jpg) no-repeat center center / cover;
     .item {
       text-align: center;
       border-left: 1px solid #ffc722;
@@ -1063,7 +1063,7 @@
 // next_match
 .match_item {
   display: flex;
-  background-image: url(/img/matchBg.png);
+  background-image: url(img/matchBg.png);
   background-size: cover;
   @include rwd(1023) {
     display: block;
@@ -1400,7 +1400,7 @@
 // team_news
 .team_news {
   padding: 90px;
-  background-image: url(/img/news_bg.jpg);
+  background-image: url(img/news_bg.jpg);
   .team_item_news {
     max-width: 1200px;
     width: 100%;
@@ -1444,11 +1444,11 @@
         margin: 0 30px;
         display: flex;
         .img {
-          background-image: url(/img/pic_01.jpg);
+          background-image: url(img/pic_01.jpg);
           background-position: center;
         }
         .img2 {
-          background-image: url(/img/pic_02.jpg);
+          background-image: url(img/pic_02.jpg);
           background-position: center;
         }
         .img,
@@ -1637,7 +1637,7 @@
 .gallery_pic {
   display: flex;
   flex-wrap: wrap;
-  background: url(../img/aboutBg_03.jpg) no-repeat 100% 100% / cover;
+  background: url(..img/aboutBg_03.jpg) no-repeat 100% 100% / cover;
   .photo {
     cursor: pointer;
     width: calc(100% / 4);
@@ -1695,7 +1695,7 @@
 
 // awards
 .awards {
-  background: url(../img/awards_bg.jpg) no-repeat center center / cover;
+  background: url(..img/awards_bg.jpg) no-repeat center center / cover;
   display: flex;
   flex-wrap: wrap;
   @include rwd(1023) {
@@ -1782,7 +1782,7 @@
     align-items: center;
     @include rwd(1023) {
       width: 100%;
-      background-image: url(/img/awards_bg_02.jpg);
+      background-image: url(img/awards_bg_02.jpg);
     }
     .award_achievements_title {
       font-size: 35px;
@@ -2065,7 +2065,6 @@
     &.on {
       color: #ffc722;
     }
-    
     & + li {
       padding-left: 40px;
     }
@@ -2075,7 +2074,7 @@
 // show_item
 .show_item {
   padding: 0 20px 100px;
-  background: url(../img/shop_bg.jpg) no-repeat center center / cover;
+  background: url(..img/shop_bg.jpg) no-repeat center center / cover;
   .show_content {
     width: 100%;
     max-width: 800px;
@@ -2138,7 +2137,7 @@
           }
         }
         animation: rotation 20s linear infinite;
-        &.on{
+        &.on {
           @keyframes ww {
             0% {
               transform: translateX(-200%);
@@ -2185,7 +2184,7 @@
           }
           animation: ww 20s linear infinite;
         }
-        &.se{
+        &.se {
           @keyframes ll {
             0% {
               transform: translateX(-600%);
@@ -2303,7 +2302,7 @@
 .message_bg_list {
   width: 100%;
   padding: 50px 20px;
-  background: url(../img/message_bg.jpg) no-repeat center / cover;
+  background: url(..img/message_bg.jpg) no-repeat center / cover;
   position: relative;
   &::before {
     content: "";
