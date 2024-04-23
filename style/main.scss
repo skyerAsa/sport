@@ -1637,7 +1637,7 @@
 .gallery_pic {
   display: flex;
   flex-wrap: wrap;
-  background: url(..img/aboutBg_03.jpg) no-repeat 100% 100% / cover;
+  background: url(../img/aboutBg_03.jpg) no-repeat 100% 100% / cover;
   .photo {
     cursor: pointer;
     width: calc(100% / 4);
@@ -2302,7 +2302,7 @@
 .message_bg_list {
   width: 100%;
   padding: 50px 20px;
-  background: url(..img/message_bg.jpg) no-repeat center / cover;
+  background: url(../img/message_bg.jpg) no-repeat center / cover;
   position: relative;
   &::before {
     content: "";
