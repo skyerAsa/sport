@@ -11,6 +11,7 @@
     <script src="https://web.cdn.openinstall.io/openinstall.js"></script>
     <script src="https://kit.fontawesome.com/64fccb9e01.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -519,29 +520,48 @@
         <div class="awards" id="awards">
             <div class="award_item">
                 <div class="award_title">
-                    <h6>OUR
+                    <h2>OUR
                         <p>AWARDS</p>
-                    </h6>
+                    </h2>
                     <div class="awards_select">
-                        <div>
-                            <i class="fas fa-chevron-left" style="color: #ffc722;" aria-hidden="true"></i>
+                        <div class="awards_left">
+                            <i class="fas fa-chevron-left" style="color: #ffc722;"></i>
                         </div>
-                        <div>
-                            <i class="fas fa-chevron-right" style="color: #363533;" aria-hidden="true"></i>
+                        <div class="awards_right">
+                            <i class="fas fa-chevron-right" style="color: #363533;"></i>
                         </div>
                     </div>
                 </div>
                 <div class="award_list">
                     <div class="award_img">
-                        <ul>
-                            <li> <img src="img/awards_01.png" alt="">
-                                <h2>2012 UEFA</h2>
-                                <p>Championship league</p>
+                        <ul class="award_list_item">
+                            <li>
+                                <div class="award_2012">
+                                    <div class="award_2012_list">
+                                        <img src="img/awards_01.png" alt="">
+                                        <h2>2012 UEFA</h2>
+                                        <p>Championship league</p>
+                                    </div>
+                                    <div class="award_2012_list">
+                                        <img src="img/awards_02.png" alt="">
+                                        <h2>2012 UEFA</h2>
+                                        <p>Championship league</p>
+                                    </div>
+                                </div>
                             </li>
                             <li>
-                                <img src="img/awards_02.png" alt="">
-                                <h2>2012 UEFA</h2>
-                                <p>Championship league</p>
+                                <div class="award_2016">
+                                    <div class="award_2016_list">
+                                        <img src="img/awards_03.png" alt="">
+                                        <h2>2016 UEFA</h2>
+                                        <p>Championship league</p>
+                                    </div>
+                                    <div class="award_2016_list">
+                                        <img src="img/awards_04.png" alt="">
+                                        <h2>2016 UEFA</h2>
+                                        <p>Championship league</p>
+                                    </div>
+                                </div>
                             </li>
 
                         </ul>
@@ -654,10 +674,6 @@
                         </div>
                     </li>
                 </ul>
-
-
-
-
             </div>
         </div>
         <!-- FUN SHOP -->
@@ -677,9 +693,10 @@
                 </li>
             </ul>
         </div>
+
         <!-- show_item -->
         <div class="show_item">
-            <div class="show_content">
+            <div class="show_content" id="carouselExampleIndicators">
                 <ul>
                     <li :class="{on:1==coin,se:2==coin}">
                         <img src="img/shop_01.jpg">
@@ -772,21 +789,53 @@
                     <div class="message_item">
                         <h6>LAST <span>MATCH</span></h6>
                         <div class=" ms_left_right">
-                            <i class="fas fa-angle-left"></i>
-                            <i class="fas fa-angle-right"></i>
+                            <div class="ms_left">
+                                <i class="fas fa-angle-left"></i>
+                            </div>
+                            <div class="ms_right">
+                                <i class="fas fa-angle-right"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="message_list">
                         <ul>
-                            <li>
-                                <div class="message_pic">
-                                    <img src="img/teamlogo_02.png">
+                            <li class="ms_item">
+                                <div class="ms_contest">
+                                    <div class="message_pic">
+                                        <img src="img/teamlogo_02.png">
+                                    </div>
+                                    <span class="message_team">UVENTUS</span>
+                                    <span class="message_vs">3：1</span>
+                                    <span class="message_team">CHALENGER</span>
+                                    <div class="message_pic">
+                                        <img src="img/teamlogo_03.png">
+                                    </div>
                                 </div>
-                                <span class="message_team">UVENTUS</span>
-                                <span class="message_vs">3：1</span>
-                                <span class="message_team">CHALENGER</span>
-                                <div class="message_pic">
-                                    <img src="img/teamlogo_03.png">
+                            </li>
+                            <li class="ms_item">
+                                <div class="ms_contest">
+                                    <div class="message_pic">
+                                        <img src="img/teamlogo_04.png">
+                                    </div>
+                                    <span class="message_team">UVENTUS</span>
+                                    <span class="message_vs">4：3</span>
+                                    <span class="message_team">CHALENGER</span>
+                                    <div class="message_pic">
+                                        <img src="img/teamlogo_06.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="ms_item">
+                                <div class="ms_contest">
+                                    <div class="message_pic">
+                                        <img src="img/teamlogo_02.png">
+                                    </div>
+                                    <span class="message_team">UVENTUS</span>
+                                    <span class="message_vs">2：4</span>
+                                    <span class="message_team">CHALENGER</span>
+                                    <div class="message_pic">
+                                        <img src="img/teamlogo_07.png">
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -852,6 +901,53 @@
                     $('.burger_about_list').slideToggle('click');
                 });
             });
+            $(function() {
+                $('.awards_left').on('click', function() {
+                    $('.award_list_item').addClass('awards_left_2012');
+                    $(".award_list_item").removeClass('awards_right_2016')
+                });
+            });
+            $(function() {
+                $('.awards_right').on('click', function() {
+                    $(".award_list_item").addClass('awards_right_2016')
+                    $(".award_list_item").removeClass('awards_left_2012')
+
+                });
+            });
+            $(function() {
+                f = true
+                $(".ms_right").click(function() {
+                    if (f = !f) {
+                        s = false
+
+                        $(".ms_item").addClass('right_item_sec')
+                        $(".ms_item").removeClass('left_item')
+                        $(".ms_item").removeClass('left_item_sec')
+                    } else {
+                        s = false
+                        $(".ms_item").addClass('right_item')
+                        $(".ms_item").removeClass('left_item')
+                        $(".ms_item").removeClass('left_item_sec')
+
+                    }
+                });
+            });
+            $(function() {
+                s = true
+                $(".ms_left").click(function() {
+                    if (s = !s) {
+                        f = true
+                        $(".ms_item").addClass('left_item')
+                        $(".ms_item").removeClass('right_item')
+                        $(".ms_item").removeClass('right_item_sec')
+                    } else {
+                        f = true
+                        $(".ms_item").addClass('left_item_sec')
+                        $(".ms_item").removeClass('right_item')
+                        $(".ms_item").removeClass('right_item_sec')
+                    }
+                });
+            });
             // 设置倒数的截止时间
             const deadline = new Date("2020-10-15T11:00:00Z");
 
@@ -880,6 +976,11 @@
                 });
             };
 
+            function wll() {
+                axios.get("json/schema.json").then((res) => {
+                    list.value = res.data[sel.value];
+                });
+            };
 
             function showMenu() {
                 if ($(window).scrollTop() > 300) {
