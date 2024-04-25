@@ -3164,10 +3164,6 @@ img {
   transition: 3s;
   transform: translateX(-100%);
 }
-.message_bg_list .message_match .message_list ul .right_item {
-  transition: 3s;
-  transform: translateX(-100%);
-}
 .message_bg_list .message_match .message_list ul .right_item_sec {
   transition: 3s;
   transform: translateX(-200%);
