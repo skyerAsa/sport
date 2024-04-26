@@ -996,6 +996,9 @@
                 h1 {
                     position: relative;
                 }
+                @include rwd(599){
+                  font-size: 25px;
+                }
             }
             .support_inner {
                 width: 80%;
@@ -2027,6 +2030,14 @@
                         .team_number {
                             color: #363533;
                             background: linear-gradient(124deg, #ffc722 50%, transparent 50%) center center / 100% 100%;
+                          @include rwd(334){
+                            width: calc(100% - 210px);
+                          background: linear-gradient(120deg, #ffc722 50%, transparent 50%) center center / 100% 100%;
+                        }
+                        @include rwd(328){
+                          width: calc(100% - 200px);
+                        background: linear-gradient(120deg, #ffc722 50%, transparent 50%) center center / 100% 100%;
+                      }
                         }
                     }
                 }
@@ -2042,6 +2053,14 @@
                         color: #ffc722;
                         @include rwd(1023) {
                             width: calc(100% - 200px);
+                        }
+                        @include rwd(334){
+                          width: calc(100% - 210px);
+                          background: linear-gradient(120deg, #363533 50%, transparent 50%) center center / 100% 100%;
+                        }
+                        @include rwd(328){
+                          width: calc(100% - 200px);
+                          background: linear-gradient(120deg, #363533 50%, transparent 50%) center center / 100% 100%;
                         }
                     }
                 }

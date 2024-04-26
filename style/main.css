@@ -1203,6 +1203,11 @@ img {
 .support .support_content .item .title h1 {
   position: relative;
 }
+@media screen and (max-width: 599px) {
+  .support .support_content .item .title {
+    font-size: 25px;
+  }
+}
 .support .support_content .item .support_inner {
   width: 80%;
   max-width: 500px;
@@ -2293,6 +2298,18 @@ img {
   color: #363533;
   background: linear-gradient(124deg, #ffc722 50%, transparent 50%) center center/100% 100%;
 }
+@media screen and (max-width: 334px) {
+  .team_member .team_content ul .team_member_list:hover .team_pic .team_number {
+    width: calc(100% - 210px);
+    background: linear-gradient(120deg, #ffc722 50%, transparent 50%) center center/100% 100%;
+  }
+}
+@media screen and (max-width: 328px) {
+  .team_member .team_content ul .team_member_list:hover .team_pic .team_number {
+    width: calc(100% - 200px);
+    background: linear-gradient(120deg, #ffc722 50%, transparent 50%) center center/100% 100%;
+  }
+}
 .team_member .team_content ul .team_member_list .team_pic {
   position: relative;
 }
@@ -2309,6 +2326,18 @@ img {
 @media screen and (max-width: 1023px) {
   .team_member .team_content ul .team_member_list .team_pic .team_number {
     width: calc(100% - 200px);
+  }
+}
+@media screen and (max-width: 334px) {
+  .team_member .team_content ul .team_member_list .team_pic .team_number {
+    width: calc(100% - 210px);
+    background: linear-gradient(120deg, #363533 50%, transparent 50%) center center/100% 100%;
+  }
+}
+@media screen and (max-width: 328px) {
+  .team_member .team_content ul .team_member_list .team_pic .team_number {
+    width: calc(100% - 200px);
+    background: linear-gradient(120deg, #363533 50%, transparent 50%) center center/100% 100%;
   }
 }
 .team_member .team_content ul .list_nav {
