@@ -90,10 +90,10 @@
                     </ul>
                 </div>
                 <div class="list">
-                    <ul>
+                    <ul class="hd_list">
                         <li class="match">
                             MATCH
-                            <ul>
+                            <ul class="header_list">
                                 <li>
                                     <p>
                                         <a href="#new_result"></a>
@@ -536,7 +536,7 @@
                     <div class="award_img">
                         <ul class="award_list_item">
                             <li>
-                                <div class="award_2012">
+                    
                                     <div class="award_2012_list">
                                         <img src="img/awards_01.png" alt="">
                                         <h2>2012 UEFA</h2>
@@ -547,10 +547,10 @@
                                         <h2>2012 UEFA</h2>
                                         <p>Championship league</p>
                                     </div>
-                                </div>
+                            
                             </li>
                             <li>
-                                <div class="award_2016">
+                             
                                     <div class="award_2016_list">
                                         <img src="img/awards_03.png" alt="">
                                         <h2>2016 UEFA</h2>
@@ -561,7 +561,7 @@
                                         <h2>2016 UEFA</h2>
                                         <p>Championship league</p>
                                     </div>
-                                </div>
+                            
                             </li>
 
                         </ul>
@@ -572,7 +572,7 @@
                 <div class="award_achievements_title">ACHIEVEMENTS</div>
                 <div class="award_achievements_item">
                     <ul>
-                        <li>
+                        <li class="award_2012">
                             <img class="award_achievements_img" src="img/awards_icon_01.png">
                             <div class="txt">
                                 <h2>8</h2>
@@ -586,7 +586,7 @@
                                 <p>GOALS</p>
                             </div>
                         </li>
-                        <li>
+                        <li class="award_2016">
                             <img class="award_achievements_img" src="img/awards_icon_03.png">
                             <div class="txt">
                                 <h2>12</h2>
@@ -630,7 +630,7 @@
                             </div>
                         </div>
                         <div class="team_txt">
-                            <h2>CHRISTOPHER HERRERA</h6>
+                            <h2>CHRISTOPHER HERRERA</h2>
                                 <span>DEFENDER</span>
                         </div>
 
@@ -643,7 +643,7 @@
                             </div>
                         </div>
                         <div class="team_txt">
-                            <h2>CHRISTOPHER HERRERA</h6>
+                            <h2>CHRISTOPHER HERRERA</h2>
                                 <span>DEFENDER</span>
                         </div>
                     </li>
@@ -656,7 +656,7 @@
                             </div>
                         </div>
                         <div class="team_txt">
-                            <h2>CHRISTOPHER HERRERA</h6>
+                            <h2>CHRISTOPHER HERRERA</h2>
                                 <span>DEFENDER</span>
                         </div>
 
@@ -669,7 +669,7 @@
                             </div>
                         </div>
                         <div class="team_txt">
-                            <h2>CHRISTOPHER HERRERA</h6>
+                            <h2>CHRISTOPHER HERRERA</h2>
                                 <span>DEFENDER</span>
                         </div>
                     </li>
@@ -787,8 +787,8 @@
                 <!-- message_match -->
                 <div class="message_match">
                     <div class="message_item">
-                        <h6>LAST <span>MATCH</span></h6>
-                        <div class=" ms_left_right">
+                        <h2>LAST <span>MATCH</span></h2>
+                        <div class="ms_left_right">
                             <div class="ms_left">
                                 <i class="fas fa-angle-left"></i>
                             </div>
@@ -855,7 +855,7 @@
         </div>
         <!-- toTop -->
         <a href="#" id="to_top" class="to_top to_top_nav">
-            <span class="fas fa-angle-up "></span>
+            <i class="fas fa-angle-up "></i>
         </a>
         <!-- footer -->
         <div class="footer">
@@ -930,12 +930,16 @@
                         $(".ms_item").removeClass('left_item_sec')
 
                     }
+                    if ($('.right_item_sec').length <= 0) {
+                        s = true
+                    }
                 });
             });
             $(function() {
                 s = true
                 $(".ms_left").click(function() {
                     if (s = !s) {
+                        console.log(s)
                         f = true
                         $(".ms_item").addClass('left_item')
                         $(".ms_item").removeClass('right_item')
@@ -946,8 +950,12 @@
                         $(".ms_item").removeClass('right_item')
                         $(".ms_item").removeClass('right_item_sec')
                     }
+                    if ($('.left_item_sec').length <= 0) {
+                        f = false
+                    }
                 });
             });
+
             // 设置倒数的截止时间
             const deadline = new Date("2020-10-15T11:00:00Z");
 

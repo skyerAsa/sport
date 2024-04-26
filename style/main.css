@@ -171,7 +171,6 @@ img {
 
 .hearder {
   position: relative;
-  transform: overflow 2s 3s;
 }
 .hearder .message {
   padding: 10px 150px 0 0;
@@ -356,7 +355,7 @@ img {
   display: flex;
   align-items: center;
 }
-.hearder .title .list ul {
+.hearder .title .list .hd_list {
   padding-right: 150px;
   display: flex;
   position: relative;
@@ -371,7 +370,7 @@ img {
   }
 }
 @media screen and (max-width: 1023px) {
-  .hearder .title .list ul {
+  .hearder .title .list .hd_list {
     display: none;
   }
 }
@@ -399,6 +398,7 @@ img {
   display: flex;
 }
 .hearder .title .list .match ul {
+  padding-top: 20px;
   width: 100%;
   position: absolute;
   display: none;
@@ -425,7 +425,7 @@ img {
   display: flex;
 }
 .hearder .title .list .team ul {
-  width: 100%;
+  padding-top: 20px;
   position: absolute;
   display: none;
   flex-direction: column;
@@ -450,7 +450,7 @@ img {
   display: flex;
 }
 .hearder .title .list .about ul {
-  width: 100%;
+  padding-top: 20px;
   position: absolute;
   display: none;
   flex-direction: column;
@@ -610,6 +610,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .hearder .navigator .left:hover::after {
@@ -1231,6 +1232,7 @@ img {
   background-color: #ffc722;
   border: 2px solid #ffc722;
   z-index: -1;
+  cursor: pointer;
 }
 .support .support_content .item .read_more p::after {
   content: "";
@@ -1442,6 +1444,10 @@ img {
   display: flex;
   border: 1px solid #858585;
   font-weight: bolder;
+  cursor: pointer;
+}
+.match_item .time_match .time_table tr:hover {
+  background-color: #a6a6a6;
 }
 .match_item .time_match .time_table tr .aboot_match_day {
   min-width: 150px;
@@ -1730,6 +1736,7 @@ img {
   font-size: 12px;
   font-weight: bolder;
   transition: 0.5s;
+  cursor: pointer;
 }
 .team_news .news_button .button_body::before {
   content: "";
@@ -1886,7 +1893,7 @@ img {
 }
 .gallery_pic .photo::before {
   content: "";
-  width: 450px;
+  width: 100%;
   height: 100%;
   position: absolute;
   right: -100%;
@@ -1899,7 +1906,7 @@ img {
 }
 .gallery_pic .photo::after {
   content: "DOUGLAS PAYNE";
-  width: 450px;
+  width: 80%;
   height: 97%;
   position: absolute;
   right: -100%;
@@ -1981,6 +1988,10 @@ img {
 .awards .award_item .award_title .awards_select .awards_left i {
   color: #ffc722;
 }
+.awards .award_item .award_title .awards_select .awards_left,
+.awards .award_item .award_title .awards_select .awards_right {
+  cursor: pointer;
+}
 .awards .award_item .award_list {
   width: 100%;
   max-width: 700px;
@@ -2005,7 +2016,16 @@ img {
   position: relative;
 }
 .awards .award_item .award_list .award_img ul li {
+  width: 50%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
   text-align: center;
+}
+@media screen and (max-width: 377px) {
+  .awards .award_item .award_list .award_img ul li {
+    justify-content: flex-start;
+  }
 }
 @media screen and (max-width: 600px) {
   .awards .award_item .award_list .award_img ul li + li {
@@ -2014,16 +2034,6 @@ img {
 }
 .awards .award_item .award_list .award_img ul li img {
   height: 250px;
-}
-.awards .award_item .award_list .award_img ul li .award_2012 {
-  width: 700px;
-  display: flex;
-  justify-content: space-around;
-}
-.awards .award_item .award_list .award_img ul li .award_2016 {
-  width: 700px;
-  display: flex;
-  justify-content: space-around;
 }
 .awards .award_achievements {
   width: 50%;
@@ -2312,13 +2322,13 @@ img {
   width: 100%;
   height: 40px;
   background-color: #363533;
-  color: #fff;
 }
 .show_list ul {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #fff;
 }
 .show_list ul:has(li:first-child.on) li:nth-child(2) {
   animation: hh 20s linear infinite;
@@ -2601,6 +2611,14 @@ img {
   100% {
     color: #ffc722;
   }
+}
+.show_list li {
+  cursor: pointer;
+}
+.show_list li:hover {
+  position: relative;
+  color: #ffc722;
+  z-index: 999 !important;
 }
 .show_list li:first-child.on {
   animation: bb 20s linear infinite;
@@ -2979,6 +2997,7 @@ img {
   padding: 10px 40px;
   border: transparent;
   background-color: #ffc722;
+  cursor: pointer;
 }
 .show_item .all_news .news_button .button_body:hover {
   background-color: #363533;
@@ -3044,6 +3063,7 @@ img {
   display: flex;
 }
 .message_bg_list .message_sel .message_icons ul li {
+  cursor: pointer;
   padding: 15px;
   font-size: 20px;
 }
@@ -3120,12 +3140,12 @@ img {
     justify-content: center;
   }
 }
-.message_bg_list .message_match .message_item h6 {
+.message_bg_list .message_match .message_item h2 {
   font-size: 35px;
   color: #ffc722;
   margin-right: 50px;
 }
-.message_bg_list .message_match .message_item h6 span {
+.message_bg_list .message_match .message_item h2 span {
   color: #fff;
 }
 .message_bg_list .message_match .message_item .ms_left_right {
@@ -3141,6 +3161,10 @@ img {
 }
 .message_bg_list .message_match .message_item .ms_left_right .ms_left {
   color: #ffc722;
+}
+.message_bg_list .message_match .message_item .ms_left_right .ms_left,
+.message_bg_list .message_match .message_item .ms_left_right .ms_right {
+  cursor: pointer;
 }
 .message_bg_list .message_match .message_list {
   width: 100%;
@@ -3161,19 +3185,19 @@ img {
   display: flex;
 }
 .message_bg_list .message_match .message_list ul .right_item {
-  transition: 3s;
+  transition: 2s;
   transform: translateX(-100%);
 }
 .message_bg_list .message_match .message_list ul .right_item_sec {
-  transition: 3s;
+  transition: 2s;
   transform: translateX(-200%);
 }
 .message_bg_list .message_match .message_list ul .left_item {
-  transition: 3s;
+  transition: 2s;
   transform: translateX(-100%);
 }
 .message_bg_list .message_match .message_list ul .left_item_sec {
-  transition: 3s;
+  transition: 2s;
   transform: translateX(0%);
 }
 .message_bg_list .message_match .message_list ul li {
@@ -3186,7 +3210,7 @@ img {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .message_bg_list .message_match .message_list ul li .message_pic {
   padding: 0 10px;
@@ -3206,6 +3230,7 @@ img {
 }
 .message_bg_list .message_match .message_list ul li .message_vs {
   color: #ffc722;
+  padding: 0 20px;
 }
 .message_bg_list .message_email {
   width: 50%;
@@ -3268,6 +3293,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .message_bg_list .message_email .subscribe input {
   width: 50%;
@@ -3282,8 +3308,9 @@ img {
 }
 
 .to_top {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
   display: none;
   align-items: center;
   justify-content: center;
@@ -3292,7 +3319,11 @@ img {
   bottom: 1%;
   background-color: rgba(0, 0, 0, 0.8);
   color: #858585;
+  font-weight: bolder;
   z-index: 4;
+}
+.to_top i {
+  font-size: 36px;
 }
 .to_top:hover {
   background-color: rgba(0, 0, 0, 0.9);
