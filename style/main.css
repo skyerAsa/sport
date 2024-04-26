@@ -562,6 +562,7 @@ img {
 }
 .hearder .slides .slide {
   width: 100%;
+  min-height: 300px;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -571,12 +572,17 @@ img {
   transition: 0.5s transform ease-in-out;
 }
 .hearder .slides .slide img {
+  min-height: 300px;
   position: absolute;
   top: 0;
   left: 0;
 }
 .hearder .slides .slide:nth-of-type(2) {
   left: 100%;
+}
+.hearder .slides img {
+  height: 100%;
+  min-height: 300px;
 }
 .hearder input[type=radio] {
   position: relative;
@@ -680,7 +686,7 @@ img {
   height: 103px;
   background-color: #f2f2f2;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -688,8 +694,12 @@ img {
   justify-content: center;
   z-index: 2;
 }
+@media screen and (max-width: 599px) {
+  .new_result .result_fraction {
+    background-color: transparent;
+  }
+}
 .new_result .result_fraction .result_win {
-  padding-left: 30px;
   margin: 10px 10px 10px 0;
   display: flex;
   align-items: center;
@@ -726,7 +736,7 @@ img {
   content: "WIN";
   font-size: 95px;
   position: absolute;
-  left: 0;
+  right: 0;
   z-index: -1;
   color: #9ca0ac;
 }
@@ -757,6 +767,12 @@ img {
 @media screen and (max-width: 600px) {
   .new_result .result_fraction .team .score {
     width: 160px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .new_result .result_fraction .team .score {
+    width: 125px;
+    padding: 20px;
   }
 }
 .new_result .result_fraction .team .score .score_txt {
@@ -792,7 +808,7 @@ img {
   right: 0;
 }
 .new_result .result_fraction .result_lost {
-  margin: 10px 0;
+  margin: 10px;
   display: flex;
   z-index: 2;
 }
@@ -1620,7 +1636,7 @@ img {
 }
 @media screen and (max-width: 500px) {
   .team_news {
-    padding: 5px;
+    padding: 90px 5px;
   }
 }
 .team_news .team_item_news {
@@ -1971,6 +1987,7 @@ img {
 .awards .award_item .award_title .awards_select {
   width: 80px;
   height: 40px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;

@@ -385,8 +385,10 @@
         list-style: none;
         background-color: #eee;
         overflow: hidden;
+
         .slide {
             width: 100%;
+            min-height: 300px;
             margin: 0;
             padding: 0;
             position: absolute;
@@ -394,12 +396,17 @@
             color: #fff;
             transition: 0.5s transform ease-in-out;
             img {
+              min-height: 300px;
                 position: absolute;
                 @include pos(tl, 0);
             }
             &:nth-of-type(2) {
                 left: 100%;
             }
+        }
+        img{
+          height: 100%;
+          min-height: 300px;
         }
     }
     input[type="radio"] {
@@ -510,15 +517,17 @@
         height: 103px;
         background-color: #f2f2f2;
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 2;
+        @include rwd(599){
+          background-color: transparent;
+        }
         .result_win {
-            padding-left: 30px;
             margin: 10px 10px 10px 0;
             display: flex;
             align-items: center;
@@ -552,7 +561,7 @@
                 content: "WIN";
                 font-size: 95px;
                 position: absolute;
-                left: 0;
+                right: 0;
                 z-index: -1;
                 color: #9ca0ac;
                 @include rwd(1023) {
@@ -577,6 +586,10 @@
                 background: linear-gradient(115deg, #ffc722 50%, transparent 50%) center center / 100% 100%, #363533 right center / auto 100%;
                 @include rwd(600) {
                     width: 160px;
+                }
+                @include rwd(360){
+                  width: 125px;
+                  padding: 20px;
                 }
                 .score_txt {
                     width: 100%;
@@ -613,7 +626,7 @@
             }
         }
         .result_lost {
-            margin: 10px 0;
+            margin: 10px;
             display: flex;
             z-index: 2;
             .img {
@@ -1398,7 +1411,7 @@
     padding: 90px;
     background-image: url(../img/news_bg.jpg);
     @include rwd(500) {
-        padding: 5px;
+        padding:90px 5px;
     }
     .team_item_news {
         max-width: 1200px;
@@ -1726,6 +1739,7 @@
             .awards_select {
                 width: 80px;
                 height: 40px;
+                margin-bottom: 10px;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
@@ -1771,13 +1785,13 @@
                     display: flex;
                     position: relative;
                     li {
-                      width: 50%;
-                      flex-shrink: 0;
-                      display: flex;
-                      justify-content: space-around;
+                        width: 50%;
+                        flex-shrink: 0;
+                        display: flex;
+                        justify-content: space-around;
                         text-align: center;
-                        @include rwd(377){
-                          justify-content: flex-start
+                        @include rwd(377) {
+                            justify-content: flex-start;
                         }
                         &+li {
                             @include rwd(600) {
@@ -1787,8 +1801,6 @@
                         img {
                             height: 250px;
                         }
-
-
                     }
                 }
             }
