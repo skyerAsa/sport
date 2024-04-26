@@ -385,7 +385,6 @@
         list-style: none;
         background-color: #eee;
         overflow: hidden;
-
         .slide {
             width: 100%;
             min-height: 300px;
@@ -396,7 +395,7 @@
             color: #fff;
             transition: 0.5s transform ease-in-out;
             img {
-              min-height: 300px;
+                min-height: 300px;
                 position: absolute;
                 @include pos(tl, 0);
             }
@@ -404,9 +403,9 @@
                 left: 100%;
             }
         }
-        img{
-          height: 100%;
-          min-height: 300px;
+        img {
+            height: 100%;
+            min-height: 300px;
         }
     }
     input[type="radio"] {
@@ -524,8 +523,8 @@
         align-items: center;
         justify-content: center;
         z-index: 2;
-        @include rwd(599){
-          background-color: transparent;
+        @include rwd(599) {
+            background-color: transparent;
         }
         .result_win {
             margin: 10px 10px 10px 0;
@@ -587,9 +586,9 @@
                 @include rwd(600) {
                     width: 160px;
                 }
-                @include rwd(360){
-                  width: 125px;
-                  padding: 20px;
+                @include rwd(360) {
+                    width: 125px;
+                    padding: 20px;
                 }
                 .score_txt {
                     width: 100%;
@@ -855,6 +854,9 @@
                     text-align: center;
                     border: 1px solid #363533;
                     z-index: -1;
+                    @include rwd(360) {
+                        width: 118px;
+                    }
                 }
                 &::after {
                     content: "READ MORE";
@@ -869,6 +871,9 @@
                     text-align: center;
                     background-color: #363533;
                     z-index: -1;
+                    @include rwd(360) {
+                        width: 110px;
+                    }
                 }
             }
         }
@@ -1411,7 +1416,7 @@
     padding: 90px;
     background-image: url(../img/news_bg.jpg);
     @include rwd(500) {
-        padding:90px 5px;
+        padding: 90px 5px;
     }
     .team_item_news {
         max-width: 1200px;
@@ -2864,6 +2869,9 @@
                     color: #fff;
                     font-weight: bolder;
                 }
+                @include rwd(413) {
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -3078,4 +3086,7 @@
     text-align: center;
     color: #363533;
     background-color: #ffc722;
+    @include rwd(413) {
+        font-size: 12px;
+    }
 }

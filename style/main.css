@@ -1052,6 +1052,11 @@ img {
   border: 1px solid #363533;
   z-index: -1;
 }
+@media screen and (max-width: 360px) {
+  .team_item .team_about .read_more P::before {
+    width: 118px;
+  }
+}
 .team_item .team_about .read_more P::after {
   content: "READ MORE";
   width: 140px;
@@ -1065,6 +1070,11 @@ img {
   text-align: center;
   background-color: #363533;
   z-index: -1;
+}
+@media screen and (max-width: 360px) {
+  .team_item .team_about .read_more P::after {
+    width: 110px;
+  }
 }
 .team_item .team_nav {
   display: flex;
@@ -3135,6 +3145,11 @@ img {
   color: #fff;
   font-weight: bolder;
 }
+@media screen and (max-width: 413px) {
+  .message_bg_list .message_tweets .txt p {
+    font-size: 12px;
+  }
+}
 .message_bg_list .message_match {
   width: 50%;
   padding: 20px;
@@ -3357,4 +3372,9 @@ img {
   text-align: center;
   color: #363533;
   background-color: #ffc722;
+}
+@media screen and (max-width: 413px) {
+  .footer {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=main.css.map */
