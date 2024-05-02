@@ -974,6 +974,11 @@ body {
   background-color: #ffc722;
   border-radius: 50px;
 }
+@media screen and (max-width: 599px) {
+  .new_result .result_fraction .team .score .score_txt .vs {
+    left: 34%;
+  }
+}
 .new_result .result_fraction .team .score .score_txt .vs p {
   font-size: 24px;
 }
@@ -1307,9 +1312,9 @@ body {
 .team_item .coach_about .img {
   width: 220px;
   height: 220px;
+  position: relative;
   background: url(../img/about_pic_02.png) no-repeat center;
   border: 1px solid #ffc722;
-  position: relative;
 }
 .team_item .coach_about .img i {
   width: 95px;
@@ -1837,7 +1842,7 @@ body {
   padding: 90px;
   background-image: url(../img/news_bg.jpg);
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 599px) {
   .team_news {
     padding: 90px 5px;
   }

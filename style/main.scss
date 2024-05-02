@@ -795,6 +795,9 @@ body {
             left: 40%;
             background-color: #ffc722;
             border-radius: 50px;
+            @include rwd(599){
+              left: 34%;
+            }
             p {
               font-size: 24px;
             }
@@ -1112,9 +1115,10 @@ body {
     .img {
       width: 220px;
       height: 220px;
+      position: relative;
       background: url(../img/about_pic_02.png) no-repeat center;
       border: 1px solid #ffc722;
-      position: relative;
+
       i {
         width: 95px;
         height: 120px;
@@ -1622,7 +1626,7 @@ body {
 .team_news {
   padding: 90px;
   background-image: url(../img/news_bg.jpg);
-  @include rwd(500) {
+  @include rwd(599) {
     padding: 90px 5px;
   }
   .team_item_news {
