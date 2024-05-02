@@ -4,11 +4,16 @@
   overflow: hidden;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 // header
 .hearder {
   position: relative;
   .message {
-    padding: 10px 150px 0 0;
+    padding: 10px 40px 0 0;
     position: absolute;
     top: 1%;
     right: 0;
@@ -188,7 +193,7 @@
       }
       animation: kkk 3s alternate;
       .hd_list {
-        padding-right: 150px;
+        padding-right: 40px;
         display: flex;
         position: relative;
         @keyframes kkk {
@@ -343,7 +348,9 @@
       right: 0;
       background-color: rgba(54, 53, 51, 0.6);
       z-index: 10;
-      display: none;
+      transform: rotateX(90deg);
+      transition: 1s;
+      transform-origin: top;
       ul {
         display: block;
       }
@@ -352,7 +359,7 @@
         padding: 10px;
         cursor: pointer;
         position: relative;
-        display: flex;
+
         a {
           width: 100%;
           height: 100%;
@@ -363,57 +370,185 @@
       .burger_match {
         position: relative;
         transition: 0.5s;
-        ul {
-          width: 100%;
-          padding-top: 20px;
-          display: none;
-          flex-direction: column;
+        &:hover {
+          color: #ffc722;
+        }
+        .on {
+          height: auto;
+          display: block;
+          opacity: 1;
+          visibility: visible;
+          transition: 0.5s;
           li {
-            width: 200px;
+            display: block;
+            height: 38px;
+            opacity: 1;
+            visibility: visible;
+            transition: 1s;
+            margin-top:0;
+          }
+        }
+        ul {
+          height: 0;
+          width: 100%;
+          padding-left: 50px;
+          transform: scale(1);
+          transform-origin: top;
+          transition: 1s;
+          overflow: hidden;
+          li {
+            width: 100%;
             white-space: nowrap;
             position: relative;
+            visibility: hidden;
+            transform: scale(1);
+            transform-origin: top;
+            margin-top:-50px;
+            transition: 1s;
+
+            &:hover {
+              transition: 0.5s;
+              background-color: rgba($color: #ffc722, $alpha: 0.5);
+            }
             a {
               width: 100%;
               height: 100%;
               position: absolute;
               @include pos(tl, 0);
+              transition: 0.5s;
+              scroll-behavior: smooth;
             }
-          }
-          .click {
-            display: block;
           }
         }
       }
       .burger_team {
         position: relative;
         transition: 0.5s;
-        ul {
-          width: 100%;
-          padding-top: 20px;
-          display: none;
-          flex-direction: column;
+        &:hover {
+          color: #ffc722;
+        }
+        .on {
+          height: auto;
+          display: block;
+          opacity: 1;
+          visibility: visible;
+          transition: 0.5s;
           li {
-            width: 200px;
+            display: block;
+            height: 38px;
+            opacity: 1;
+            visibility: visible;
+            transition: 1s;
+            margin-top:0;
+          }
+        }
+        ul {
+          height: 0;
+          width: 100%;
+          padding-left: 50px;
+          transform: scale(1);
+          transform-origin: top;
+          transition: 1s;
+          overflow: hidden;
+          li {
+            width: 100%;
             white-space: nowrap;
             position: relative;
+            visibility: hidden;
+            transform: scale(1);
+            transform-origin: top;
+            margin-top:-50px;
+            transition: 1s;
+
+            &:hover {
+              transition: 0.5s;
+              background-color: rgba($color: #ffc722, $alpha: 0.5);
+            }
+            a {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              @include pos(tl, 0);
+              transition: 0.5s;
+              scroll-behavior: smooth;
+            }
           }
         }
       }
       .burger_about {
         position: relative;
         transition: 0.5s;
-        ul {
-          width: 100%;
-          padding-top: 20px;
-          display: none;
-          flex-direction: column;
+        &:hover {
+          color: #ffc722;
+        }
+        .on {
+          height: auto;
+          display: block;
+          opacity: 1;
+          visibility: visible;
+          transition: 0.5s;
           li {
-            width: 200px;
+            display: block;
+            height: 38px;
+            opacity: 1;
+            visibility: visible;
+            transition: 1s;
+            margin-top:0;
+          }
+        }
+        ul {
+          height: 0;
+          width: 100%;
+          padding-left: 50px;
+          transform: scale(1);
+          transform-origin: top;
+          transition: 1s;
+          overflow: hidden;
+          li {
+            width: 100%;
             white-space: nowrap;
             position: relative;
+            visibility: hidden;
+            transform: scale(1);
+            transform-origin: top;
+            margin-top:-50px;
+            transition: 1s;
+
+            &:hover {
+              transition: 0.5s;
+              background-color: rgba($color: #ffc722, $alpha: 0.5);
+            }
+            a {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              @include pos(tl, 0);
+              transition: 0.5s;
+              scroll-behavior: smooth;
+            }
           }
         }
       }
+      .burger_shop,
+      .burger_ms {
+        &:hover {
+          color: #ffc722;
+        }
+      }
+    }
+    .on {
+      @keyframes cccc {
+        from {
+          transform: rotateX(90deg);
+        }
+        to {
+          transform: rotateX(0deg);
+        }
+      }
+      animation: cccc 1s forwards;
+    }
+    .menu_list_change {
+      display: none;
     }
   }
   .slides {
@@ -784,7 +919,7 @@
         .txt {
           background-color: #fff;
           P {
-            width: 140px;
+            width: 142px;
             margin: 10px 30px 0 30px;
             padding: 10px;
             border: 1px solid #ffc722;
@@ -803,8 +938,8 @@
             }
             &::before {
               content: "";
-              width: 132px;
-              height: 30px;
+              width: 135px;
+              height: 33px;
               position: absolute;
               left: 2%;
               background-color: #ffc722;
@@ -888,8 +1023,6 @@
         a {
           position: absolute;
           @include pos(tl, 0);
-          width: 100%;
-          height: 100%;
         }
         &::before {
           content: "";
@@ -929,6 +1062,7 @@
           text-align: center;
           background-color: #363533;
           z-index: -1;
+          cursor: pointer;
           @include rwd(360) {
             width: 110px;
           }
@@ -942,6 +1076,7 @@
   .coach_about {
     width: 50%;
     padding: 30px;
+    min-height: 400px;
     display: none;
     justify-content: space-around;
     position: relative;
@@ -959,39 +1094,27 @@
     }
     @include rwd(1023) {
       width: 100%;
-      padding-left: 100px;
       background-image: url(../img/aboutBg_03.jpg);
     }
-    @include rwd(1023) {
-      padding-left: 0px;
-    }
-    .coach_name {
-      .name {
-        padding-top: 10px;
-        font-size: 25px;
-        display: flex;
-        flex-direction: column;
-        color: #fff;
-        font-weight: bolder;
-        span {
-          color: #ffc722;
-        }
+    .name {
+      position: absolute;
+      bottom: -70px;
+      padding-top: 10px;
+      font-size: 25px;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      font-weight: bolder;
+      span {
+        color: #ffc722;
       }
     }
     .img {
-      height: 240px;
-      width: 240px;
-      margin-right: 20px;
-      background-image: url(../img/about_pic_02.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      position: relative;
+      width: 220px;
+      height: 220px;
+      background: url(../img/about_pic_02.png) no-repeat center;
       border: 1px solid #ffc722;
-      @include rwd(600) {
-        width: 100%;
-        max-width: 400px;
-        height: 240px;
-      }
+      position: relative;
       i {
         width: 95px;
         height: 120px;
@@ -1055,11 +1178,18 @@
         display: flex;
         position: relative;
         justify-content: space-between;
+        @include rwd(599) {
+          transform: translateY(-14px);
+        }
         .blank_block {
           width: calc(50% - 200px);
           min-width: 20px;
           border-top: 1px solid #ffc722;
           margin-top: 20px;
+          @include rwd(599) {
+            width: calc(50% - 130px);
+            margin-top: 13px;
+          }
         }
         h1 {
           position: relative;
@@ -1151,13 +1281,13 @@
   }
   .next_time_about {
     width: 50%;
-    padding: 20px;
+    padding: 50px 20px;
     @include rwd(1023) {
       width: 100%;
     }
     .next_match {
       max-width: 600px;
-      margin: 40px auto 0;
+      margin: 0 auto;
       padding-bottom: 40px;
       background-color: #fff;
       display: flex;
@@ -1280,15 +1410,9 @@
   }
   .time_match {
     width: 50%;
-    max-width: 600px;
-    height: 360px;
-    margin: 40px auto 0;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    // background-color: #363533;
+    padding: 50px 20px;
     @include rwd(1023) {
-        width: 100%;
+      width: 100%;
       display: flex;
       justify-content: center;
       padding-bottom: 60px;
@@ -1327,17 +1451,32 @@
           @include rwd(1400) {
             width: 400px;
           }
-          @include rwd(1300) {
-            width: 350px;
-          }
+          //   @include rwd(1300) {
+          //     width: 350px;
+          //   }
           @include rwd(1200) {
-            width: 300px;
+            width: 350px;
           }
           @include rwd(1023) {
+            width: 450px;
+          }
+          @include rwd(600) {
+            width: 400px;
+          }
+          @include rwd(570) {
             width: 350px;
           }
-          @include rwd(800) {
-            width: 100%;
+          @include rwd(540) {
+            width: 300px;
+          }
+          @include rwd(470) {
+            width: 250px;
+          }
+          @include rwd(415) {
+            width: 200px;
+          }
+          @include rwd(360) {
+            width: 150px;
           }
         }
         .day_nav,

@@ -169,11 +169,16 @@ img {
   overflow: hidden;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 .hearder {
   position: relative;
 }
 .hearder .message {
-  padding: 10px 150px 0 0;
+  padding: 10px 40px 0 0;
   position: absolute;
   top: 1%;
   right: 0;
@@ -365,7 +370,7 @@ img {
   }
 }
 .hearder .title .list .hd_list {
-  padding-right: 150px;
+  padding-right: 40px;
   display: flex;
   position: relative;
   animation: kkk 3s alternate;
@@ -510,7 +515,9 @@ img {
   right: 0;
   background-color: rgba(54, 53, 51, 0.6);
   z-index: 10;
-  display: none;
+  transform: rotateX(90deg);
+  transition: 1s;
+  transform-origin: top;
 }
 .hearder .title .menu_list ul {
   display: block;
@@ -520,7 +527,6 @@ img {
   padding: 10px;
   cursor: pointer;
   position: relative;
-  display: flex;
 }
 .hearder .title .menu_list li a {
   width: 100%;
@@ -533,16 +539,46 @@ img {
   position: relative;
   transition: 0.5s;
 }
+.hearder .title .menu_list .burger_match:hover {
+  color: #ffc722;
+}
+.hearder .title .menu_list .burger_match .on {
+  height: auto;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+}
+.hearder .title .menu_list .burger_match .on li {
+  display: block;
+  height: 38px;
+  opacity: 1;
+  visibility: visible;
+  transition: 1s;
+  margin-top: 0;
+}
 .hearder .title .menu_list .burger_match ul {
+  height: 0;
   width: 100%;
-  padding-top: 20px;
-  display: none;
-  flex-direction: column;
+  padding-left: 50px;
+  transform: scale(1);
+  transform-origin: top;
+  transition: 1s;
+  overflow: hidden;
 }
 .hearder .title .menu_list .burger_match ul li {
-  width: 200px;
+  width: 100%;
   white-space: nowrap;
   position: relative;
+  visibility: hidden;
+  transform: scale(1);
+  transform-origin: top;
+  margin-top: -50px;
+  transition: 1s;
+}
+.hearder .title .menu_list .burger_match ul li:hover {
+  transition: 0.5s;
+  background-color: rgba(255, 199, 34, 0.5);
 }
 .hearder .title .menu_list .burger_match ul li a {
   width: 100%;
@@ -550,39 +586,134 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-}
-.hearder .title .menu_list .burger_match ul .click {
-  display: block;
+  transition: 0.5s;
+  scroll-behavior: smooth;
 }
 .hearder .title .menu_list .burger_team {
   position: relative;
   transition: 0.5s;
 }
+.hearder .title .menu_list .burger_team:hover {
+  color: #ffc722;
+}
+.hearder .title .menu_list .burger_team .on {
+  height: auto;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+}
+.hearder .title .menu_list .burger_team .on li {
+  display: block;
+  height: 38px;
+  opacity: 1;
+  visibility: visible;
+  transition: 1s;
+  margin-top: 0;
+}
 .hearder .title .menu_list .burger_team ul {
+  height: 0;
   width: 100%;
-  padding-top: 20px;
-  display: none;
-  flex-direction: column;
+  padding-left: 50px;
+  transform: scale(1);
+  transform-origin: top;
+  transition: 1s;
+  overflow: hidden;
 }
 .hearder .title .menu_list .burger_team ul li {
-  width: 200px;
+  width: 100%;
   white-space: nowrap;
   position: relative;
+  visibility: hidden;
+  transform: scale(1);
+  transform-origin: top;
+  margin-top: -50px;
+  transition: 1s;
+}
+.hearder .title .menu_list .burger_team ul li:hover {
+  transition: 0.5s;
+  background-color: rgba(255, 199, 34, 0.5);
+}
+.hearder .title .menu_list .burger_team ul li a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  scroll-behavior: smooth;
 }
 .hearder .title .menu_list .burger_about {
   position: relative;
   transition: 0.5s;
 }
+.hearder .title .menu_list .burger_about:hover {
+  color: #ffc722;
+}
+.hearder .title .menu_list .burger_about .on {
+  height: auto;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+}
+.hearder .title .menu_list .burger_about .on li {
+  display: block;
+  height: 38px;
+  opacity: 1;
+  visibility: visible;
+  transition: 1s;
+  margin-top: 0;
+}
 .hearder .title .menu_list .burger_about ul {
+  height: 0;
   width: 100%;
-  padding-top: 20px;
-  display: none;
-  flex-direction: column;
+  padding-left: 50px;
+  transform: scale(1);
+  transform-origin: top;
+  transition: 1s;
+  overflow: hidden;
 }
 .hearder .title .menu_list .burger_about ul li {
-  width: 200px;
+  width: 100%;
   white-space: nowrap;
   position: relative;
+  visibility: hidden;
+  transform: scale(1);
+  transform-origin: top;
+  margin-top: -50px;
+  transition: 1s;
+}
+.hearder .title .menu_list .burger_about ul li:hover {
+  transition: 0.5s;
+  background-color: rgba(255, 199, 34, 0.5);
+}
+.hearder .title .menu_list .burger_about ul li a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  scroll-behavior: smooth;
+}
+.hearder .title .menu_list .burger_shop:hover,
+.hearder .title .menu_list .burger_ms:hover {
+  color: #ffc722;
+}
+.hearder .title .on {
+  animation: cccc 1s forwards;
+}
+@keyframes cccc {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+.hearder .title .menu_list_change {
+  display: none;
 }
 .hearder .slides {
   width: 100%;
@@ -974,7 +1105,7 @@ img {
   background-color: #fff;
 }
 .new_result .result_content .result .read_more .txt P {
-  width: 140px;
+  width: 142px;
   margin: 10px 30px 0 30px;
   padding: 10px;
   border: 1px solid #ffc722;
@@ -994,8 +1125,8 @@ img {
 }
 .new_result .result_content .result .read_more .txt P::before {
   content: "";
-  width: 132px;
-  height: 30px;
+  width: 135px;
+  height: 33px;
   position: absolute;
   left: 2%;
   background-color: #ffc722;
@@ -1079,8 +1210,6 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
 }
 .team_item .team_about .read_more P::before {
   content: "";
@@ -1124,6 +1253,7 @@ img {
   text-align: center;
   background-color: #363533;
   z-index: -1;
+  cursor: pointer;
 }
 @media screen and (max-width: 360px) {
   .team_item .team_about .read_more P::after {
@@ -1136,6 +1266,7 @@ img {
 .team_item .coach_about {
   width: 50%;
   padding: 30px;
+  min-height: 400px;
   display: none;
   justify-content: space-around;
   position: relative;
@@ -1157,16 +1288,12 @@ img {
 @media screen and (max-width: 1023px) {
   .team_item .coach_about {
     width: 100%;
-    padding-left: 100px;
     background-image: url(../img/aboutBg_03.jpg);
   }
 }
-@media screen and (max-width: 1023px) {
-  .team_item .coach_about {
-    padding-left: 0px;
-  }
-}
-.team_item .coach_about .coach_name .name {
+.team_item .coach_about .name {
+  position: absolute;
+  bottom: -70px;
   padding-top: 10px;
   font-size: 25px;
   display: flex;
@@ -1174,25 +1301,15 @@ img {
   color: #fff;
   font-weight: bolder;
 }
-.team_item .coach_about .coach_name .name span {
+.team_item .coach_about .name span {
   color: #ffc722;
 }
 .team_item .coach_about .img {
-  height: 240px;
-  width: 240px;
-  margin-right: 20px;
-  background-image: url(../img/about_pic_02.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
+  width: 220px;
+  height: 220px;
+  background: url(../img/about_pic_02.png) no-repeat center;
   border: 1px solid #ffc722;
-}
-@media screen and (max-width: 600px) {
-  .team_item .coach_about .img {
-    width: 100%;
-    max-width: 400px;
-    height: 240px;
-  }
+  position: relative;
 }
 .team_item .coach_about .img i {
   width: 95px;
@@ -1254,11 +1371,22 @@ img {
   position: relative;
   justify-content: space-between;
 }
+@media screen and (max-width: 599px) {
+  .support .support_content .item .title {
+    transform: translateY(-14px);
+  }
+}
 .support .support_content .item .title .blank_block {
   width: calc(50% - 200px);
   min-width: 20px;
   border-top: 1px solid #ffc722;
   margin-top: 20px;
+}
+@media screen and (max-width: 599px) {
+  .support .support_content .item .title .blank_block {
+    width: calc(50% - 130px);
+    margin-top: 13px;
+  }
 }
 .support .support_content .item .title h1 {
   position: relative;
@@ -1351,7 +1479,7 @@ img {
 }
 .match_item .next_time_about {
   width: 50%;
-  padding: 20px;
+  padding: 50px 20px;
 }
 @media screen and (max-width: 1023px) {
   .match_item .next_time_about {
@@ -1360,7 +1488,7 @@ img {
 }
 .match_item .next_time_about .next_match {
   max-width: 600px;
-  margin: 40px auto 0;
+  margin: 0 auto;
   padding-bottom: 40px;
   background-color: #fff;
   display: flex;
@@ -1496,12 +1624,7 @@ img {
 }
 .match_item .time_match {
   width: 50%;
-  max-width: 600px;
-  height: 360px;
-  margin: 40px auto 0;
-  padding: 20px;
-  display: flex;
-  align-items: center;
+  padding: 50px 20px;
 }
 @media screen and (max-width: 1023px) {
   .match_item .time_match {
@@ -1547,24 +1670,44 @@ img {
     width: 400px;
   }
 }
-@media screen and (max-width: 1300px) {
-  .match_item .time_match .time_table tr .aboot_match_team {
-    width: 350px;
-  }
-}
 @media screen and (max-width: 1200px) {
   .match_item .time_match .time_table tr .aboot_match_team {
-    width: 300px;
+    width: 350px;
   }
 }
 @media screen and (max-width: 1023px) {
   .match_item .time_match .time_table tr .aboot_match_team {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .match_item .time_match .time_table tr .aboot_match_team {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .match_item .time_match .time_table tr .aboot_match_team {
     width: 350px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 540px) {
   .match_item .time_match .time_table tr .aboot_match_team {
-    width: 100%;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .match_item .time_match .time_table tr .aboot_match_team {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 415px) {
+  .match_item .time_match .time_table tr .aboot_match_team {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .match_item .time_match .time_table tr .aboot_match_team {
+    width: 150px;
   }
 }
 .match_item .time_match .time_table tr .day_nav,
