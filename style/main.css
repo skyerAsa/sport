@@ -1072,6 +1072,11 @@ body {
   margin-top: -20px;
   font-weight: bolder;
 }
+@media screen and (max-width: 599px) {
+  .new_result .result_content .result .title p {
+    margin-top: -12px;
+  }
+}
 .new_result .result_content .result .resulu_match {
   padding-top: 40px;
   font-size: 18px;
@@ -1814,7 +1819,6 @@ body {
 .match_item .time_match .time_table tr td .img img {
   width: 40px;
   height: 40px;
-  margin: 0 10px;
 }
 .match_item .time_match .time_table tr td .txt {
   display: flex;
@@ -2164,6 +2168,11 @@ body {
     width: 100%;
   }
 }
+@media screen and (max-width: 340px) {
+  .awards .award_item {
+    padding: 50px 5px;
+  }
+}
 .awards .award_item .award_title {
   display: flex;
   justify-content: center;
@@ -2255,13 +2264,28 @@ body {
   justify-content: space-around;
   text-align: center;
 }
-@media screen and (max-width: 377px) {
+@media screen and (max-width: 415px) {
   .awards .award_item .award_list .award_img ul li {
     justify-content: flex-start;
   }
 }
-@media screen and (max-width: 600px) {
-  .awards .award_item .award_list .award_img ul li + li {
+@media screen and (max-width: 415px) {
+  .awards .award_item .award_list .award_img ul li .award_2012_list + .award_2012_list {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 377px) {
+  .awards .award_item .award_list .award_img ul li .award_2012_list + .award_2012_list {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 415px) {
+  .awards .award_item .award_list .award_img ul li .award_2016_list + .award_2016_list {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 377px) {
+  .awards .award_item .award_list .award_img ul li .award_2016_list + .award_2016_list {
     padding-left: 0;
   }
 }

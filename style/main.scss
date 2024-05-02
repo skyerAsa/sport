@@ -885,6 +885,9 @@ body {
         p {
           margin-top: -20px;
           font-weight: bolder;
+          @include rwd(599){
+            margin-top: -12px;
+          }
         }
       }
       .resulu_match {
@@ -1596,7 +1599,7 @@ body {
             img {
               width: 40px;
               height: 40px;
-              margin: 0 10px;
+
             }
           }
           .txt {
@@ -1933,6 +1936,9 @@ body {
     @include rwd(1023) {
       width: 100%;
     }
+    @include rwd(340){
+      padding: 50px 5px;
+    }
     .award_title {
       display: flex;
       justify-content: center;
@@ -2017,11 +2023,23 @@ body {
             display: flex;
             justify-content: space-around;
             text-align: center;
-            @include rwd(377) {
+            @include rwd(415) {
               justify-content: flex-start;
             }
-            & + li {
-              @include rwd(600) {
+            .award_2012_list + .award_2012_list {
+
+              @include rwd(415) {
+                padding-left: 40px;
+              }
+              @include rwd(377) {
+                padding-left: 0;
+              }
+            }
+            .award_2016_list + .award_2016_list{
+              @include rwd(415) {
+                padding-left: 40px;
+              }
+              @include rwd(377) {
                 padding-left: 0;
               }
             }
